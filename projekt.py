@@ -68,6 +68,7 @@ def set_nickname():
         client.subscribe(TOPIC)
         client.loop_start()
 
+# Funkcja zapisu do pliku
 def save_messages():
     messages = text_area.get('1.0', tk.END).strip()
     if messages:
@@ -97,7 +98,7 @@ nickname_button.pack()
 # Okno główne
 root = tk.Tk()
 root.title("AES Chat")
-root.withdraw()  # Ukrycie okna głównego na początku
+root.withdraw()
 
 text_area = scrolledtext.ScrolledText(root, height=20, width=50)
 text_area.pack(padx=10, pady=10)
